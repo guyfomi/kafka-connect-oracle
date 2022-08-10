@@ -147,6 +147,7 @@ public class LogMinerThread implements Runnable {
               Timestamp commitTimeStamp=logMinerData.getTimestamp(COMMIT_TIMESTAMP_FIELD);
               Long commitScn=logMinerData.getLong(COMMIT_SCN_FIELD);
               String rowId=logMinerData.getString(ROW_ID_FIELD);
+              String username=logMinerData.getString("username");
               //#log.info(operation+"-"+xid+"-"+scn);
 
               if (operation.equals(OPERATION_COMMIT)){
